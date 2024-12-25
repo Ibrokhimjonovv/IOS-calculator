@@ -11,10 +11,9 @@ html, body, #fullheight {
 }
 
 .container {
-    min-width: 455px;
-    height: 100%;
+    max-width: 305px;
+    height: 70%;
     background-color: #000;
-    max-width: 1200px;
 }
 
 .result {
@@ -26,8 +25,8 @@ html, body, #fullheight {
 }
 
 .result span {
-    margin-right: 60px;
-    font-size: 210px;
+    margin-right: 20px;
+    font-size: 50px;
     justify-self: flex-end;
 }
 
@@ -43,16 +42,21 @@ html, body, #fullheight {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+    font-size: 26px;
     color: #fff;
     border-radius: 100%;
-    width: 150px;
-    height: 150px;
+    width: 70px;
+    height: 70px;
     padding: 10px;
     cursor: pointer;
     align-self: center;
     justify-self: center;
     margin: 10px 5px !important;
+    transition: all 0.2s;
+}
+
+.item:hover {
+    opacity: 0.6;
 }
 
 .percent {
@@ -82,36 +86,65 @@ html, body, #fullheight {
 
 .itemZero {
     background-color: #343434;
-    width: 400px;
+    width: 135px;
     border-radius: 135px;
     grid-column: span 2;
     border: none;
 }
 
-@media screen and (max-width:1200px) {
-    .item {
-        width: 150px;
-        height: 150px;
-    }
-    .itemZero {
-        width: 315px;
-        height: 150px;
-    }
-    .result span {
-        font-size: 170px;
-    }
-}
 
 @media screen and (max-width:645px) {
     .itemZero {
-        width: 280px;
+        width: 150px;
+    }
+
+    .container {
+        margin: 0 auto;
+        height: 100%;
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+}
+@media screen and (min-width:1377px) {
+    .container {
+        max-width: 450px;
+    }
+    .item {
+        width: 80px;
+        height: 80px;
+    }
+    .itemZero {
+        width: 205px;
+    }
+    .result span {
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width:1877px) {
+    .container {
+        max-width: 480px;
+    }
+    .item {
+        width: 100px;
+        height: 100px;
+    }
+    .itemZero {
+        width: 225px;
+    }
+    .result span {
+        font-size: 100px;
     }
 }
 
 @media screen and (min-width:2800px) {
+    .container {
+        max-width: 1200px;
+    }
     .item {
         width: 250px;
         height: 250px;
+        font-size: 120px;
     }
 
     .itemZero {
